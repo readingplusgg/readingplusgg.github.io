@@ -3,41 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Protected Page</title>
+    <title>readingplusgg</title>
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            font-family: Arial, sans-serif;
-        }
-        input[type="password"] {
-            padding: 10px;
-            font-size: 16px;
-        }
-        button {
-            padding: 10px 15px;
-            font-size: 16px;
+            margin: 0;
         }
     </style>
 </head>
 <body>
-    <div>
-        <h1>Enter Password</h1>
-        <input type="password" id="password" placeholder="Password">
-        <button onclick="checkPassword()">Submit</button>
-    </div>
-
-    <script>
-        function checkPassword() {
-            const password = document.getElementById('password').value;
-            if (password === '8646') {
-                window.location.href = 'https://github.com/readingplusgg/readingplusgg'; // Replace with your target URL
-            } else {
-                alert('Incorrect password. Please try again.');
-            }
-        }
-    </script>
+    <h1>Welcome to MathPunch!</h1>
+    <button onclick="window.location.href='https://github.com/mathpunch/ixlmathgg';">Click Me</button>
 </body>
 </html>
