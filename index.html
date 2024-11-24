@@ -92,6 +92,36 @@
             color: white; /* White text */
             z-index: 1000; /* Make sure it's above other content */
         }
+        .chatbox {
+            margin-top: 20px;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 300px;
+        }
+        .chatbox textarea {
+            width: 100%;
+            height: 100px;
+            background-color: #222;
+            color: white;
+            border: 1px solid #444;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .chatbox button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+        }
+        .chatbox button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -146,73 +176,4 @@
         <button onclick="setTheme('orange')">Orange</button>
         <button onclick="setTheme('grey')">Grey</button>
         <button onclick="setTheme('black')">Dark Mode</button>
-        <button onclick="setTheme('pink')">Pink</button>
-    </div>
-
-    <footer>
-        Made By Ozzy For Michael
-    </footer>
-
-    <script>
-        // Check for saved theme on page load
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            setTheme(savedTheme);
-        }
-
-        function toggleThemeSelector() {
-            const themeSelector = document.getElementById('themeSelector');
-            themeSelector.style.display = themeSelector.style.display === 'none' || themeSelector.style.display === '' ? 'block' : 'none';
-            const header = document.getElementById('themeHeader');
-            header.style.color = 'white'; // Default to white
-        }
-
-        function setTheme(color) {
-            switch (color) {
-                case 'blue':
-                    document.body.style.backgroundColor = '#007BFF';
-                    document.body.style.color = 'white';
-                    break;
-                case 'red':
-                    document.body.style.backgroundColor = '#FF0000';
-                    document.body.style.color = 'white';
-                    break;
-                case 'purple':
-                    document.body.style.backgroundColor = '#800080';
-                    document.body.style.color = 'white';
-                    break;
-                case 'green':
-                    document.body.style.backgroundColor = '#28A745';
-                    document.body.style.color = 'white';
-                    break;
-                case 'yellow':
-                    document.body.style.backgroundColor = '#FFC107';
-                    document.body.style.color = 'white'; // Set text to white
-                    document.getElementById('themeHeader').style.color = 'white'; // Set header to white
-                    break;
-                case 'orange':
-                    document.body.style.backgroundColor = '#FFA500';
-                    document.body.style.color = 'white'; // Set text to white
-                    document.getElementById('themeHeader').style.color = 'white'; // Set header to white
-                    break;
-                case 'grey':
-                    document.body.style.backgroundColor = '#6c757d';
-                    document.body.style.color = 'white';
-                    break;
-                case 'black':
-                    document.body.style.backgroundColor = '#1a1a1a';
-                    document.body.style.color = 'white';
-                    document.getElementById('themeHeader').style.color = 'white'; // Set header to white
-                    break;
-                case 'pink':
-                    document.body.style.backgroundColor = '#FFC0CB';
-                    document.body.style.color = 'white'; // Set text to white
-                    document.getElementById('themeHeader').style.color = 'white'; // Set header to white
-                    break;
-            }
-            // Save the selected theme to localStorage
-            localStorage.setItem('theme', color);
-        }
-    </script>
-</body>
-</html>
+        <button onclick="setTheme
